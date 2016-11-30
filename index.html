@@ -4,58 +4,71 @@
 	<meta charset="utf-8"/>
 	<style type="text/css">
 		.tabs {
-		  min-width: 320px;
-		  max-width: 800px;
-		  padding: 0px;
-		  margin: 0 auto; 
+			min-width: 320px;
+			max-width: 800px;
+			padding: 0px;
+			margin: 0 auto;
 		}
 		/* стили секций с содержанием */
+        ul {
+            list-style: none;
+            color: #000;
+        }
+        ul li {
+            padding-left: 1em;
+            font-size: medium;
+            font-family: "GothicG";
+            color: lawngreen;
+        }
+        li:nth-child(odd) {
+            background-color: gray; /* bullet color */
+        }
 		section {
-		  display: none;
-		  padding: 15px;
-		  height: 500px;
-		  background: #fff;
-		  border: 1px solid #ddd;
+			display: none;
+			padding: 15px;
+			height: 500px;
+			background: #fff;
+			border: 1px solid #ddd;
 		}
 		.tabs input {
-		  display: none;
+			display: none;
 		}
 		/* стили вкладок (табов) */
 		.tabs label {
-		  display: inline-block;
-		  margin: 0 0 -1px;
-		  padding: 15px 25px;
-		  font-weight: 600;
-		  text-align: center;
-		  color: #aaa;
-		  border: 1px solid #ddd;
-		  background: #f1f1f1;
-		  border-radius: 3px 3px 0 0;
+			display: inline-block;
+			margin: 0 0 -1px;
+			padding: 15px 25px;
+			font-weight: 600;
+			text-align: center;
+			color: #aaa;
+			border: 1px solid #ddd;
+			background: #f1f1f1;
+			border-radius: 3px 3px 0 0;
 		}
 		/* шрифт-иконки от Font Awesome в формате Unicode */
 		.tabs label:before {
-		  font-family: fontawesome;
-		  font-weight: normal;
-		  margin-right: 10px;
+			font-family: fontawesome;
+			font-weight: normal;
+			margin-right: 10px;
 		}
 		/* изменения стиля заголовков вкладок при наведении */
 		.tabs label:hover {
-		  color: #888;
-		  cursor: pointer;
+			color: #888;
+			cursor: pointer;
 		}
 		/* стили для активной вкладки */
 		.tabs input:checked + label {
-		  color: red;
-		  border: 1px solid #ddd;
-		  border-top: 1px solid #009933;
-		  border-bottom: 1px solid #fff;
-		  background: #fff;
+			color: red;
+			border: 1px solid #ddd;
+			border-top: 1px solid #009933;
+			border-bottom: 1px solid #fff;
+			background: #fff;
 		}
 		/* активация секций с помощью переключателя :checked */
 		#tab1:checked ~ #content1,
 		#tab2:checked ~ #content2,
 		#tab3:checked ~ #content3 {
-		  display: block;
+			display: block;
 		}
 	</style>
 </head>
@@ -81,9 +94,13 @@
 		        </p>
 		    </section> 
 		    <section id="content3">
-		        <p>
-		          Здесь размещаете любое содержание....
-				</p>
+		        <ul>
+					<li>One</li>
+					<li>Two</li>
+					<li>Three</li>
+                    <li>Four</li>
+                    <li>Five</li>
+				</ul>
 		    </section>   
 		</div>
 	</body>
