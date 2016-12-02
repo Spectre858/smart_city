@@ -1,107 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-	<title> First html </title>
-	<meta charset="utf-8"/>
-	<style type="text/css">
-		.tabs {
-			min-width: 320px;
-			max-width: 800px;
-			padding: 0px;
-			margin: 0 auto;
-		}
-		/* стили секций с содержанием */
-        ul {
-            list-style: none;
-            color: #000;
-        }
-        ul li {
-            padding-left: 1em;
-            font-size: medium;
-            font-family: "GothicG";
-            color: lawngreen;
-        }
+    <meta charset="UTF-8">
+    <title>Material</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+    <style type="text/css">
         li:nth-child(odd) {
-            background-color: gray; /* bullet color */
+            background-color: #CFD8DC;
         }
-		section {
-			display: none;
-			padding: 15px;
-			height: 500px;
-			background: #fff;
-			border: 1px solid #ddd;
-		}
-		.tabs input {
-			display: none;
-		}
-		/* стили вкладок (табов) */
-		.tabs label {
-			display: inline-block;
-			margin: 0 0 -1px;
-			padding: 15px 25px;
-			font-weight: 600;
-			text-align: center;
-			color: #aaa;
-			border: 1px solid #ddd;
-			background: #f1f1f1;
-			border-radius: 3px 3px 0 0;
-		}
-		/* шрифт-иконки от Font Awesome в формате Unicode */
-		.tabs label:before {
-			font-family: fontawesome;
-			font-weight: normal;
-			margin-right: 10px;
-		}
-		/* изменения стиля заголовков вкладок при наведении */
-		.tabs label:hover {
-			color: #888;
-			cursor: pointer;
-		}
-		/* стили для активной вкладки */
-		.tabs input:checked + label {
-			color: red;
-			border: 1px solid #ddd;
-			border-top: 1px solid #009933;
-			border-bottom: 1px solid #fff;
-			background: #fff;
-		}
-		/* активация секций с помощью переключателя :checked */
-		#tab1:checked ~ #content1,
-		#tab2:checked ~ #content2,
-		#tab3:checked ~ #content3 {
-			display: block;
-		}
-	</style>
+        .mdl-layout__tab-panel {
+            padding: 15px;
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+        }
+    </style>
 </head>
-	<body>
-		<div class="tabs">
-		    <input id="tab1" type="radio" name="tabs" checked>
-		    <label for="tab1" title="Вкладка 1">Запрос</label>
-		 
-		    <input id="tab2" type="radio" name="tabs">
-		    <label for="tab2" title="Вкладка 2">Ответ</label>
-		 
-		    <input id="tab3" type="radio" name="tabs">
-		    <label for="tab3" title="Вкладка 3">История</label>
-		 
-		    <section id="content1">
-		        <p>
-				Здесь размещаете любое содержание....
-		        </p>
-		    </section>  
-		    <section id="content2">
-		        <p>
-		          Здесь размещаете содержание....
-		        </p>
-		    </section> 
-		    <section id="content3">
-		        <ul>
-					<li>One</li>
-					<li>Two</li>
-					<li>Three</li>
-                    <li>Four</li>
-                    <li>Five</li>
-				</ul>
-		    </section>   
-		</div>
-	</body>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Material design</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Запрос</a>
+            <a href="#scroll-tab-2" class="mdl-layout__tab">Ответ</a>
+            <a href="#scroll-tab-3" class="mdl-layout__tab">История</a>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1"></section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2"></section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+            <div class="page-content">
+                <ul class="demo-list-item mdl-list">
+                    <li class="mdl-list__item">
+                        10.11.2016: Решение какой-то задачи
+                    </li>
+                    <li class="mdl-list__item">
+                        14.11.2016: Возвращение на родину
+                    </li>
+                    <li class="mdl-list__item">
+                        20.11.2016: Тразакция
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
 </html>
