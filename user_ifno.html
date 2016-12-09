@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User info</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
+		<link rel="stylesheet" href="user_info.css">
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+		<script defer src="user_info.js"></script>
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+					<span class="mdl-layout-title">Users info</span>
+					<div class="mdl-layout-spacer"></div>
+					<form action="#" onsubmit="searchUser();">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+							<label class="mdl-button mdl-js-button mdl-button--icon" for="search_text">
+								<i class="material-icons">search</i>
+							</label>
+							<div class="mdl-textfield__expandable-holder">
+								<input class="mdl-textfield__input" type="text" id="search_text">
+							</div>
+						</div>
+					</form>
+				</div>
+			</header>
+			<main class="mdl-layout__content">
+				<div class="page-content" id="main_container">
+					<div/>
+				</div>
+			</main>
+			<footer class="mdl-mini-footer">
+				<div class="mdl-logo">
+					<form action="#" onchange="sort();">
+						<label>
+							<span class="mdl-radio__label">Sort by:</span>
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="radio_name">
+								<input type="radio" id="radio_name" class="mdl-radio__button" name="radio_sort"
+									   value="radio_name">
+								<span class="mdl-radio__label">Name</span>
+							</label>
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="radio_date">
+								<input type="radio" id="radio_date" class="mdl-radio__button" name="radio_sort"
+									   value="radio_date">
+								<span class="mdl-radio__label">Date</span>
+							</label>
+						</label>
+					</form>
+				</div>
+				<div class="mdl-mini-footer__right-section">
+
+					<ul class="mdl-mini-footer__link-list">
+						<li>
+							<button id="fab_down_page"
+									class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored"
+									onclick="pageDown();">
+								<i class="material-icons">undo</i>
+							</button>
+						</li>
+						<li>
+							<input id="slider" class="mdl-slider mdl-js-slider" type="range"
+								   min="1" max="100" value="0" tabindex="0" oninput="changePage(value);">
+							<label id="slider_label" class="slider-label" for="slider">page</label>
+						</li>
+						<li>
+							<button id="fab_up_page"
+									class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored"
+									onclick="pageUp();">
+								<i class="material-icons">redo</i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

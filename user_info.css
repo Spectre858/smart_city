@@ -1,0 +1,33 @@
+li.mdl-list__item--three-line:nth-child(odd) {
+    background-color: #CFD8DC;
+}
+
+.demo-list-three {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.mdl-mini-footer {
+    background-color: #37474F;
+}
+/*#FFAB40*/
+
+.mdl-radio {
+    margin: 10px;
+}
+
+.mdl-button {
+    background-color: #FFB74D;
+}
+.mdl-button--mini-fab {
+    visibility: hidden;
+}
+.mdl-textfield__input {
+    background-color: white;
+    color: #37474F;
+}
+
+.slider-label {
+    margin: 35%;
+}
