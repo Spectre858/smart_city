@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Material</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Material design</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Запрос</a>
+            <a href="#scroll-tab-2" class="mdl-layout__tab" onclick="clearBadges('resp');">
+                Ответ
+                <span id="badges_response" class="mdl-badge" data-badge="0"></span>
+            </a>
+            <a href="#scroll-tab-3" class="mdl-layout__tab" onclick="clearBadges('hist');">
+                История
+                <span id="badges_history" class="mdl-badge" data-badge="0"></span>
+            </a>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+            <div class="center">
+                <input class="mdl-textfield__input" id="login" type="text" placeholder="login" required autofocus>
+                <input class="mdl-textfield__input" id="password" type="password" placeholder="password" required>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="mySub();">ОТПРАВИТЬ</button>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+            <div class="page-content">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <tbody id="tab-2-table">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+            <div class="page-content">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <tbody id="tab-3-table">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+        </div>
+    </main>
+</div>
+</body>
+</html>
