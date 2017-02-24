@@ -1,9 +1,6 @@
 li:nth-child(odd) {
     background-color: #CFD8DC;
 }
-tr:nth-child(odd) {
-    background-color: #CFD8DC;
-}
 .mdl-layout__tab-panel {
     padding: 15px;
     width: 60%;

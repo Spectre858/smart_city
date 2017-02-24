@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css">
     <link rel="stylesheet" href="index.css">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <script defer src="index.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -18,12 +18,12 @@
         </div>
         <!-- Tabs -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Запрос</a>
-            <a href="#scroll-tab-2" class="mdl-layout__tab" onclick="clearBadges('resp');">
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active" onclick="clickTab('req');">Запрос</a>
+            <a href="#scroll-tab-2" class="mdl-layout__tab" onclick="clickTab('resp');">
                 Ответ
                 <span id="badges_response" class="mdl-badge" data-badge="0"></span>
             </a>
-            <a href="#scroll-tab-3" class="mdl-layout__tab" onclick="clearBadges('hist');">
+            <a href="#scroll-tab-3" class="mdl-layout__tab" onclick="clickTab('hist');">
                 История
                 <span id="badges_history" class="mdl-badge" data-badge="0"></span>
             </a>
@@ -41,6 +41,12 @@
         <section class="mdl-layout__tab-panel" id="scroll-tab-2">
             <div class="page-content">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Время</th>
+                            <th colspan="4" class="mdl-data-table__cell--non-numeric">Ответ</th>
+                        </tr>
+                    </thead>
                     <tbody id="tab-2-table">
                     </tbody>
                 </table>
@@ -49,6 +55,14 @@
         <section class="mdl-layout__tab-panel" id="scroll-tab-3">
             <div class="page-content">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Время</th>
+                        <th colspan="2" class="mdl-data-table__cell--non-numeric">Запрос</th>
+                        <th class="mdl-data-table__cell--non-numeric">Статус</th>
+                        <th class="mdl-data-table__cell--non-numeric">Результат</th>
+                    </tr>
+                    </thead>
                     <tbody id="tab-3-table">
                     </tbody>
                 </table>
