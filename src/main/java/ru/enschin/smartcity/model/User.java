@@ -3,6 +3,9 @@ package ru.enschin.smartcity.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 
 /**
@@ -10,6 +13,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "users")
+@XmlRootElement(name = "appData")
 public class User implements Serializable{
 
     @JsonProperty("id")
@@ -55,6 +59,7 @@ public class User implements Serializable{
         this.surname = surname;
     }
 
+    @XmlTransient
     public int getId() {
         return id;
     }
@@ -63,6 +68,7 @@ public class User implements Serializable{
         this.id = id;
     }
 
+    @XmlTransient
     public String getLogin() {
         return login;
     }
@@ -71,6 +77,7 @@ public class User implements Serializable{
         this.login = login;
     }
 
+    @XmlTransient
     public String getPassword() {
         return password;
     }
@@ -79,6 +86,7 @@ public class User implements Serializable{
         this.password = password;
     }
 
+    @XmlElement
     public String getEmail() {
         return email;
     }
@@ -87,6 +95,7 @@ public class User implements Serializable{
         this.email = email;
     }
 
+    @XmlElement
     public String getFirstname() {
         return firstname;
     }
@@ -95,6 +104,7 @@ public class User implements Serializable{
         this.firstname = firstname;
     }
 
+    @XmlElement
     public String getLastname() {
         return lastname;
     }
@@ -103,6 +113,7 @@ public class User implements Serializable{
         this.lastname = lastname;
     }
 
+    @XmlElement
     public String getSurname() {
         return surname;
     }

@@ -24,3 +24,16 @@ li:nth-child(odd) {
 .mdl-badge {
     visibility: hidden;
 }
+.demo-card-wide.mdl-card {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    /*background: url('http://boombob.ru/img/picture/Oct/11/bacc9b24ad99a30e163b7ab317765791/1.jpg') center / cover;*/
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
